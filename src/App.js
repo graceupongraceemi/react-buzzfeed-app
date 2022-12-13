@@ -27,8 +27,8 @@ const App = () => {
     <div className='app'>
       <Title title={quiz?.title} subtitle={quiz?.subtitle} />
       {quiz &&
-        quiz?.content.map((contentItem) => (
-          <QuestionsBlock quizItem={contentItem} />
+        quiz?.content.map((contentItem, _index) => (
+          <QuestionsBlock key={_index} quizItem={contentItem} />
         ))}
     </div>
   );

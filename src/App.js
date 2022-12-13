@@ -26,9 +26,10 @@ const App = () => {
   return (
     <div className='app'>
       <Title title={quiz?.title} subtitle={quiz?.subtitle} />
-      {quiz?.content.map((contentItem) => (
-        <QuestionsBlock />
-      ))}
+      {quiz &&
+        quiz?.content.map((contentItem) => (
+          <QuestionsBlock quizItem={contentItem} />
+        ))}
     </div>
   );
 };

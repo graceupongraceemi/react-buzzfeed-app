@@ -1,10 +1,18 @@
-const QuestionBlock = ({ question, setChosenAnswerItems }) => {
+const QuestionBlock = ({
+  question,
+  setChosenAnswerItems,
+  chosenAnswerItems
+}) => {
   const handleClick = () => {
     setChosenAnswerItems((prevState) => [...prevState, question.text]);
   };
 
   return (
-    <button className='question-block' onClick={handleClick}>
+    <button
+      className='question-block'
+      onClick={handleClick}
+      disabled={!chosenAnswerItems.includes(question.text)}
+    >
       <img src={question.image} alt={question.alt} />
       <h3>{question.text}</h3>
       <p>

@@ -32,6 +32,7 @@ const App = () => {
             key={contentItem.id}
             quizItem={contentItem}
             setChosenAnswerItems={setChosenAnswerItems}
+            chosenAnswerItems={chosenAnswerItems}
           />
         ))}
     </div>

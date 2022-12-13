@@ -1,6 +1,10 @@
-const QuestionBlock = ({ question }) => {
+const QuestionBlock = ({ question, setChosenAnswerItems }) => {
+  const handleClick = () => {
+    setChosenAnswerItems((prevState) => [...prevState, question.text]);
+  };
+
   return (
-    <button className='question-block'>
+    <button className='question-block' onClick={handleClick}>
       <img src={question.image} alt={question.alt} />
       <h3>{question.text}</h3>
       <p>

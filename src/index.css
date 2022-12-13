@@ -47,3 +47,14 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.question-block {
+  width: 286px;
+  height: 286px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 0 0 1px;
+  text-align: center;
+  margin-bottom: 15px;
+  overflow: hidden;
+}

@@ -26,7 +26,6 @@ const App = () => {
     const unansweredIds = quiz?.content.map(({ id }) => id);
     setUnansweredQuestionIds(unansweredIds);
   }, []);
-
   console.log(chosenAnswerItems);
 
   return (

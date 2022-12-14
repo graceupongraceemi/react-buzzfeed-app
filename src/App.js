@@ -4,7 +4,8 @@ import QuestionsBlock from './components/QuestionsBlock';
 import AnswerBlock from './components/AnswerBlock';
 
 const App = () => {
-  const [quiz, setQuiz] = useState(false);
+  // const [quiz, setQuiz] = useState(false);  changed to 'null'
+  const [quiz, setQuiz] = useState(null);
   const [chosenAnswerItems, setChosenAnswerItems] = useState([]);
   const [unansweredQuestionIds, setUnansweredQuestionIds] = useState([]);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -48,17 +49,16 @@ const App = () => {
   return (
     <div className='app'>
       <Title title={quiz?.title} subtitle={quiz?.subtitle} />
-      {quiz &&
-        quiz?.content.map((contentItem) => (
-          <QuestionsBlock
-            key={contentItem.id}
-            quizItem={contentItem}
-            setChosenAnswerItems={setChosenAnswerItems}
-            chosenAnswerItems={chosenAnswerItems}
-            unansweredQuestionIds={unansweredQuestionIds}
-            setUnansweredQuestionIds={setUnansweredQuestionIds}
-          />
-        ))}
+      {quiz?.content?.map((contentItem) => (
+        <QuestionsBlock
+          key={contentItem.id}
+          quizItem={contentItem}
+          setChosenAnswerItems={setChosenAnswerItems}
+          chosenAnswerItems={chosenAnswerItems}
+          unansweredQuestionIds={unansweredQuestionIds}
+          setUnansweredQuestionIds={setUnansweredQuestionIds}
+        />
+      ))}
       {showAnswer && (
         <AnswerBlock
           answerOptions={quiz?.answers}

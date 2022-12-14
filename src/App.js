@@ -34,6 +34,8 @@ const App = () => {
       if (unansweredQuestionIds.length <= 0 && chosenAnswerItems.length >= 1) {
         // scroll to answer block
         setShowAnswer(true);
+        const answerBlock = document.getElementById('answer-block');
+        answerBlock?.scrollIntoView({ behavior: 'smooth' });
       }
       // scroll to highest unansweredQuestionId
 
@@ -41,7 +43,7 @@ const App = () => {
       const highestElement = document.getElementById(highestId);
       highestElement?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [unansweredQuestionIds, chosenAnswerItems]);
+  }, [unansweredQuestionIds, showAnswer, chosenAnswerItems]);
 
   return (
     <div className='app'>

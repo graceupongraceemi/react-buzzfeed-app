@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -46,7 +46,7 @@ p {
 }
 
 .questions-container {
-  margin: 1rem 1.438rem 0;
+  margin: 1rem 0 1.438rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

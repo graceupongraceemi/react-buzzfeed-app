@@ -1,7 +1,9 @@
 const QuestionBlock = ({
   question,
   setChosenAnswerItems,
-  chosenAnswerItems
+  chosenAnswerItems,
+  unansweredQuestionIds,
+  setUnansweredQuestionIds
 }) => {
   const handleClick = () => {
     setChosenAnswerItems((prevState) => [...prevState, question.text]);
@@ -11,7 +13,7 @@ const QuestionBlock = ({
     <button
       className='question-block'
       onClick={handleClick}
-      disabled={!chosenAnswerItems.includes(question.text)}
+      // disabled={!chosenAnswerItems.includes(question.text)}
     >
       <img src={question.image} alt={question.alt} />
       <h3>{question.text}</h3>

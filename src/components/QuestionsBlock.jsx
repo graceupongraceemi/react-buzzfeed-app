@@ -3,7 +3,9 @@ import QuestionBlock from './QuestionBlock';
 const QuestionsBlock = ({
   quizItem,
   setChosenAnswerItems,
-  chosenAnswerItems
+  chosenAnswerItems,
+  unansweredQuestionIds,
+  setUnansweredQuestionIds
 }) => {
   return (
     <>
@@ -17,6 +19,8 @@ const QuestionsBlock = ({
             question={question}
             setChosenAnswerItems={setChosenAnswerItems}
             chosenAnswerItems={chosenAnswerItems}
+            unansweredQuestionIds={unansweredQuestionIds}
+            setUnansweredQuestionIds={setUnansweredQuestionIds}
           />
         ))}
       </div>

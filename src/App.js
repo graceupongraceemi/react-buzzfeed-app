@@ -23,10 +23,13 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const unansweredIds = quiz?.content.map(({ id }) => id);
+    const unansweredIds = quiz?.content?.map(({ id }) => id);
     setUnansweredQuestionIds(unansweredIds);
-  }, []);
+  }, [quiz]);
+
   console.log(chosenAnswerItems);
+
+  console.log(unansweredQuestionIds);
 
   return (
     <div className='app'>

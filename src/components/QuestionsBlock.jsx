@@ -16,6 +16,7 @@ const QuestionsBlock = ({
         {quizItem.questions.map((question, _index) => (
           <QuestionBlock
             key={_index}
+            quizItemId={quizItem.id}
             question={question}
             setChosenAnswerItems={setChosenAnswerItems}
             chosenAnswerItems={chosenAnswerItems}

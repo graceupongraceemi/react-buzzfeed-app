@@ -1,5 +1,6 @@
 const QuestionBlock = ({
   question,
+  quizItemId,
   setChosenAnswerItems,
   chosenAnswerItems,
   unansweredQuestionIds,
@@ -7,6 +8,9 @@ const QuestionBlock = ({
 }) => {
   const handleClick = () => {
     setChosenAnswerItems((prevState) => [...prevState, question.text]);
+    setUnansweredQuestionIds(
+      unansweredQuestionIds.filter((id) => id !== quizItemId)
+    );
   };
 
   return (

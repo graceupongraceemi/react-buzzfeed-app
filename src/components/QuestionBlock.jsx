@@ -13,11 +13,16 @@ const QuestionBlock = ({
     );
   };
 
+  const validPick =
+    !chosenAnswerItems?.includes(question.text) &&
+    !unansweredQuestionIds?.includes(quizItemId);
+
   return (
     <button
       className='question-block'
       onClick={handleClick}
       // disabled={!chosenAnswerItems.includes(question.text)}
+      disabled={validPick}
     >
       <img src={question.image} alt={question.alt} />
       <h3>{question.text}</h3>

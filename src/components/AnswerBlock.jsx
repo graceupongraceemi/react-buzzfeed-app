@@ -15,7 +15,7 @@ const AnswerBlock = ({ answerOptions, chosenAnswers }) => {
         setResult(answerOptions[0]);
       }
     });
-  }, []);
+  }, [result]);
 
   console.log(result);
 
